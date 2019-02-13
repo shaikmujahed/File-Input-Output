@@ -1,0 +1,15 @@
+# Above is a function that takes five pieces of information about a user and saves that data to a file. We'll assume firstName, lastName, 
+# and country are strings, age is an integer, and height (expressed in meters) is a float.
+
+def saveuserProfile(firstName,lastName,age,height,country):
+    filename=lastName+firstName +".txt"
+    outputFile=open(filename,'w')
+    print(lastName, file=outputFile)
+    print(firstName, file=outputFile)
+    print(age, file=outputFile)
+    print(height, file=outputFile)
+    print(country, file=outputFile)
+    outputFile.close()
+
+saveuserProfile('shaik','Mujahed','21','5.2','INDIA')
+print(saveuserProfile)
