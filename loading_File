@@ -1,0 +1,11 @@
+
+def loadProfile(filename):
+
+    inputFile = open(filename, 'r')
+    lastName = inputFile.readline()
+    firstName = inputFile.readline()
+    country  = inputFile.readline()
+    height = float(inputFile.readline())
+    age = int(inputFile.readline())
+
+    return (firstName, lastName, age, height, country)
