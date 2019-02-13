@@ -1,0 +1,23 @@
+# Imagine you're writing some software to run a household thermostat. 
+# As part of that, you want to keep a log file, LogFile.txt, 
+# that records every time the temperature setting on the thermostat changes.
+# So, you decide to do this by writing a log function that takes as input a number as a float,
+# and writes it to the log file.
+
+
+def logChanges(newValue):
+    logFile=[1]
+    [2]
+    [3]
+# Blank #1
+# Opening a file using open() method
+    open("logFile.txt", 'a')
+    # Blank #2
+    #  specifying the mode 
+    print('New temperature setting:', newValue,flie=logFile)
+    # closing to file
+    # blank #3
+    logFile.close()
+
+print(logChanges)
+
