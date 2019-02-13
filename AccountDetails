@@ -1,0 +1,13 @@
+def saveUserInfo(username, value, password):
+      usernameFile = open("Username.txt", "w")
+      accountValueFile = open("AccountValue.txt", "w")
+      passwordFile = open("Password.txt", "w")
+      usernameFile.write(username)
+      accountValueFile.write(str(value))
+      passwordFile.write(password)
+      usernameFile.close()
+      accountValueFile.close()
+      passwordFile.close()
+
+print(saveUserInfo("RamblinWreck20", 222, "burd311"))
+
