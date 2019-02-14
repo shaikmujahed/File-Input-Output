@@ -11,3 +11,33 @@ outputFile = open("movies.txt", "w")
 for movie in movieList:
     print(movie, file = outputFile)
 outputFile.close()
+
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Now imagine we want to read that list of movies back into our program, such that we end up with a variable movieList that contains the same list of tuples we had originally.
+
+# To do this, we'll need a new method: ast.literal_eval().
+# ast.literal_eval() does a lot of fancy things, but for right now,
+# all you need to know is this: if you put a string that contains something that looks like a tuple into ast.literal_eval(),
+# then it will convert it to a tuple. For example, this code:
+
+# import ast
+# myTuple = ast.literal_eval("('Rasee', 530, 2017)")
+
+# ..will create the tuple ('Rasee', 530, 2017) from the string "('Rasee', 530, 2017)". 
+# This is useful because in the previously,
+# we printed lines like "('Rasee', 530, 2017)" to our file. 
+# When we read them, Python will initially interpret them as strings.
+
+
+
+import ast
+
+movieList=[]
+inputFile=open("movie.txt",'r')
+for line in inputFile:
+    lineAsTuple=ast.literal_eval(line)
+    movieList.append(lineAsTuple)
+inputFile.close()
+print(movieList)
