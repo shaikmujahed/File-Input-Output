@@ -1,0 +1,13 @@
+# Imagine we have a list of tuples, each of which holds a string and two integers: a movie's title, its gross (in millions of dollars),
+# and its release year.Here's a declaration of a short example of this kind of list:
+# movieList = [('Rasee', 530, 2017), ('Sultan', 486, 2017), ('Baazar', 408, 2017)]
+# Imagine we wanted to write this list to a file called Movies.txt,
+# such that each line contained one such tuple. For the above list, we would want the file to read:
+# ('Rasee', 530, 2017)
+# ('Sultan', 486, 2017)
+# ('Baazar', 408, 2017)
+
+outputFile = open("movies.txt", "w")
+for movie in movieList:
+    print(movie, file = outputFile)
+outputFile.close()
