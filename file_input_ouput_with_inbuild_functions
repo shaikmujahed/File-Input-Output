@@ -1,0 +1,236 @@
+#hackerrank problem
+# find diagonal difference
+
+import random
+import re
+import sys
+
+# Complete the diagonalDifference function below.
+def diagonalDifference(arr):
+    diff=0
+    arr_len= len(arr)
+    for indx in range(arr_len):
+        diff += arr[indx][indx]
+        diff -= arr[indx][arr_len-indx-1]
+    return abs(diff)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    arr = []
+
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    result = diagonalDifference(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+
+# sockMerchant
+    l=[]
+    res=0
+    for i in n:
+        if i not in l:
+            l[i]=0
+        l[i]+=1
+    for i in l:
+        res += l[i]/2
+    return res
+
+
+    
+n = int(raw_input().strip())
+c = map(int,raw_input().strip().split(' '))
+my_s=[]
+for i in list(set(c)):
+    my_s.append(c.count(i))
+total=0
+for i in my_s:
+    if i >1:
+        i=i/2
+        total+=i
+print total
+
+
+
+
+n=str(input("Enter Yor Name and Know your Look Whom"))
+if n[0]=="M" or "m":
+    print(n+" is Look like SRK")
+else:
+    print(n)
+
+
+
+# Hackerrank problem
+import math
+import os
+import random
+import re
+import sys
+
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+    for i in range(1, 11):
+        x=n*i
+        print("{} x {} = {} " .format(n,i,x))
+
+
+# coding exercise find coffee
+def find_coffee(filename):
+    # First we open the file as usual. Note that if we don't
+    # supply a read mode, Python assumes "read", so we don't
+    # actually need to include the "r" in the call to
+    # open() -- but we could.
+
+    file_reader = open(filename)
+
+    # Then we read the file into a variable called contents:
+
+    contents = file_reader.read()
+
+    # Then we check if "coffee" appears in that string:
+
+    result = "coffee" in contents
+
+    # Close the file...
+
+    file_reader.close()
+
+    # Then return the result!
+
+    return result
+
+    # We could compress this a bit as well, but not down
+
+
+# to one line because we need to be able to close the
+# file.
+
+
+print(find_coffee("coffeeful.txt"))
+print(find_coffee("coffeeless.txt"))
+
+
+myList = []
+
+#Open OutputFile.txt in read mode
+inputFile = open("OutputFile.txt", "r")
+
+#For each line in the file
+for line in inputFile:
+    #Add the line to myList, stripping out whitespace
+    myList.append(line.strip())
+
+print(myList)
+
+inputFile.close()
+
+
+#2
+myList = []
+
+#Open OutputFile.txt in read mode
+inputFile = open("OutputFile.txt", "r")
+
+myInt1 = int(inputFile.readline())
+myInt2 = int(inputFile.readline())
+myInt3 = int(inputFile.readline())
+#For each line in the file
+for line in inputFile:
+    #Add the line to myList, stripping out whitespace
+    myList.append(line.strip())
+
+print(myInt1)
+print(myInt2)
+print(myInt3)
+print(myList)
+
+inputFile.close()
+
+
+#Saves inList to the file
+def save(filename, inList):
+    outputFile = open(filename, "w")
+
+    for item in inList:
+        print(item, file = outputFile)
+
+    outputFile.close()
+
+#Loads from filename and returns a list of the contents
+def load(filename):
+    inputFile = open(filename, "r")
+    inList = []
+
+    for line in inputFile:
+        inList.append(line.strip())
+    inputFile.close()
+    return inList
+
+myList = ["David", "Lucy", "Vrushali", "Ping", "Natalie",
+          "Dana", "Addison", "Jasmine"]
+save("OutputFile.txt", myList)
+newList = load("OutputFile.txt")
+
+print(newList)
+
+
+
+inputFile = open("OutputFile.txt", "r")
+print(inputFile)
+inputFile.close()
+
+
+
+inputFile = open("OutputFile.txt", "r")
+
+#Print the next line of inputFile
+print(inputFile.readline())
+#Print the next line of inputFile
+print(inputFile.readline())
+#Print the next line of inputFile
+print(inputFile.readline())
+
+inputFile.close()
+
+
+
+inputFile = open("OutputFile.txt", "r")
+
+#Print the next line of inputFile
+print(inputFile.readline().strip())
+#Print the next line of inputFile
+print(inputFile.readline().strip())
+#Print the next line of inputFile
+print(inputFile.readline().strip())
+
+inputFile.close()
+
+
+
+inputFile = open("OutputFile.txt", "r")
+
+#Read the next line of inputFile, cast it
+#to int, and assign it to myInt1
+myInt1 = int(inputFile.readline())
+#Read the next line of inputFile, cast it
+#to int, and assign it to myInt2
+myInt2 = int(inputFile.readline())
+#Read the next line of inputFile, cast it
+#to int, and assign it to myInt3
+myInt3 = int(inputFile.readline())
+
+print("myInt1:", myInt1)
+print("myInt2:", myInt2)
+print("myInt3:", myInt3)
+
+inputFile.close()
